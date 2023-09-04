@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Experience 1",
+        "description": "blah 1",
+        "key": "Experience 1 Key",
+        "image": "/experience/sleeping_cat.jpg"
+    },
+    {
+        "title": "Experience 2",
+        "description": "blah 2",
+        "key": "Experience 2 Key",
+        "image": "/experience/christmas_chester.jpg"
+    },
+    {
+        "title": "Experience 3",
+        "description": "blah 3",
+        "key": "Experience 3 Key",
+        "image": "/experience/casper.jpg"
+    }
+]
