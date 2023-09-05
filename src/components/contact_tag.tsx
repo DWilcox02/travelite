@@ -1,9 +1,9 @@
-import { createElement } from "react";
+import { FunctionComponent, createElement } from "react";
 
 interface ContactTagProps {
     title: string;
     value: string;
-    icon: JSX.Element;
+    icon: FunctionComponent;
     link: string;
 }
 
