@@ -1,6 +1,9 @@
 import Home from "./home";
 import ExperiencePage from "./experience_page";
 import AboutPage from "./about_page";
+import TiersPage from "./tiers_page";
+import Inquiry from "./inquiries";
+import Contact from "./contact";
 
 function PageContainer() {
     return (
@@ -8,6 +11,9 @@ function PageContainer() {
             <Home></Home>
             <ExperiencePage></ExperiencePage>
             <AboutPage></AboutPage>
+            <TiersPage></TiersPage>
+            <Inquiry></Inquiry>
+            <Contact></Contact>
         </div>
     );
 }

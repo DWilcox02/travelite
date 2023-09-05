@@ -2,10 +2,10 @@ import { Heading1 } from "./headings";
 
 function AboutPage() {
     return (
-        <div className="w-full flex flex-col h-2/3">
-            <div className="mx-4 p-4 bg-white bg-opacity-10">
-                <Heading1 text="About Me..."></Heading1>
-                <p className="text-white text-left">
+        <div className="w-full flex flex-col">
+            <div className="m-4 p-4 bg-white bg-opacity-30 rounded-md text-black">
+                <Heading1 text="About Me..." colour="black"></Heading1>
+                <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Integer at metus ultricies, vulputate felis nec, tincidunt
                     diam. Pellentesque a nisl sed purus lobortis pulvinar. Sed
