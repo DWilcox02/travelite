@@ -4,6 +4,7 @@ import AboutPage from "./about_page";
 import TiersPage from "./tiers_page";
 import Inquiry from "./inquiries";
 import Contact from "./contact";
+import ThankYou from "./thank_you";
 
 function PageContainer() {
     return (
@@ -14,6 +15,7 @@ function PageContainer() {
             <TiersPage></TiersPage>
             <Inquiry></Inquiry>
             <Contact></Contact>
+            <ThankYou></ThankYou>
         </div>
     );
 }

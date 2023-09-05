@@ -31,7 +31,9 @@ function Inquiry() {
                         className="grid grid-cols-1 gap-4 w-1/2"
                     >
                         <div className="flex flex-col">
-                            <label htmlFor="name">Name</label>
+                            <label className="py-1" htmlFor="name">
+                                Name
+                            </label>
                             <input
                                 type="text"
                                 name="name"
@@ -42,7 +44,9 @@ function Inquiry() {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="email">Email</label>
+                            <label className="py-1" htmlFor="email">
+                                Email
+                            </label>
                             <input
                                 type="text"
                                 name="email"
@@ -53,7 +57,9 @@ function Inquiry() {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="emailConfirm">Confirm Email</label>
+                            <label className="py-1" htmlFor="emailConfirm">
+                                Confirm Email
+                            </label>
                             <input
                                 type="text"
                                 name="emailConfirm"
@@ -64,7 +70,9 @@ function Inquiry() {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="description">Inquiry</label>
+                            <label className="py-1" htmlFor="description">
+                                Inquiry
+                            </label>
                             <textarea
                                 name="description"
                                 placeholder="description"

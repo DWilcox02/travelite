@@ -8,7 +8,7 @@ function Contact() {
     const instagram = contactDetails.instagram;
 
     return (
-        <div className="w-full flex flex-col h-2/3">
+        <div className="w-full flex flex-col pb-20">
             <div className="m-4 p-4">
                 <Heading1 text="Contact Me" colour="black"></Heading1>
                 <div className="flex flex-col justify-center items-center pt-4">
