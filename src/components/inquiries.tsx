@@ -23,9 +23,9 @@ function Inquiry() {
 
     return (
         <div className="w-full flex flex-col py-4">
-            <div className="m-4 p-4 bg-white bg-opacity-30 rounded-md">
+            <div className="m-4 bg-white bg-opacity-30 rounded-md">
                 <Heading2 text="Inquiries" colour="white"></Heading2>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center px-4">
                     <form
                         onSubmit={inquirySubmitHandler}
                         className="grid grid-cols-1 gap-4 w-1/2"

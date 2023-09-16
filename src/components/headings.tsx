@@ -5,7 +5,7 @@ interface HeadingProps {
 
 function Heading1({text, colour}: HeadingProps) {
     return (
-        <div className={`text-${colour} divide-${colour}`}>
+        <div className={`text-${colour} divide-${colour} px-4 py-2`}>
             <h1 className={`text-left text-3xl`}>
                 {text}
             </h1>
@@ -16,7 +16,7 @@ function Heading1({text, colour}: HeadingProps) {
 
 function Heading2({text, colour}: HeadingProps) {
     return (
-        <div className={`text-${colour} divide-${colour} text-left flex flex-col items-center justify-center`}>
+        <div className={`text-${colour} divide-${colour} text-left flex flex-col items-center justify-center px-4 py-2`}>
             <h2 className={`text-left text-3xl italic`}>
                 {text}
             </h2>
@@ -25,4 +25,15 @@ function Heading2({text, colour}: HeadingProps) {
     )
 }
 
-export { Heading1, Heading2 };
+function Heading3({text, colour}: HeadingProps) {
+    return (
+        <div className={`text-${colour} divide-${colour} px-4 py-2`}>
+            <h1 className={`text-center text-3xl`}>
+                {text}
+            </h1>
+            <hr className="my-2" style={{borderColor: colour}}/>
+        </div>
+    )
+}
+
+export { Heading1, Heading2, Heading3 };

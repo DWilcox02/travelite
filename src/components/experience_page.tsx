@@ -17,9 +17,9 @@ function ExperiencePage() {
 
     return (
         <div className="w-full flex-col py-4">
-            <div className="m-4 p-4 rounded-md bg-white bg-opacity-30">
+            <div className="m-4 rounded-md bg-white bg-opacity-30">
                 <Heading1 text="My Experiences" colour="black"></Heading1>
-                <div className="w-full flex items-center justify-center h-2/3">
+                <div className="w-full flex items-center justify-center h-2/3 px-4 pb-4">
                     <Carousel>{items}</Carousel>
                 </div>
             </div>
