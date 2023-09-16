@@ -1,5 +1,5 @@
 import { FormEvent, useRef } from "react";
-import { Heading2 } from "./headings";
+import { Heading1 } from "./headings";
 
 function Inquiry() {
     const nameInputRef = useRef<HTMLInputElement>(null);
@@ -23,8 +23,8 @@ function Inquiry() {
 
     return (
         <div className="w-full flex flex-col py-4">
-            <div className="m-4 bg-white bg-opacity-30 rounded-md">
-                <Heading2 text="Inquiries" colour="white"></Heading2>
+            <div className="bg-white bg-opacity-30 rounded-md">
+                <Heading1 text="Inquiries" colour="black"></Heading1>
                 <div className="flex justify-center items-center px-4">
                     <form
                         onSubmit={inquirySubmitHandler}

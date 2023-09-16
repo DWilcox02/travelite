@@ -1,32 +1,32 @@
 import Home from "./home";
 import ExperiencePage from "./experience_page";
 // import AboutPage from "./about_page";
-import ServicesPage from "./services_page";
-import Inquiry from "./inquiries";
+import TravelServices from "./travel_services";
+import ReviewsAndInquiries from "./reviews_and_inquiries";
 import ThankYou from "./thank_you";
-import ReviewsPage from "./reviews_page";
 import ArtGallery from "./art_gallery";
 import { useEffect, useRef } from "react";
-
+import ArtServices from "./art_services";
 
 interface PageContainerProps {
     setTravelSection: () => void;
     setArtSection: () => void;
 }
 
-function PageContainer({setTravelSection, setArtSection}: PageContainerProps) {
+function PageContainer({
+    setTravelSection,
+    setArtSection,
+}: PageContainerProps) {
     const artRef = useRef(null);
-    
 
     const callbackFunction = (entries: IntersectionObserverEntry[]) => {
         const [entry] = entries; // first and only entry
         if (entry.isIntersecting) {
             setArtSection();
-            
         } else {
             setTravelSection();
         }
-    }
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(callbackFunction);
@@ -38,18 +38,18 @@ function PageContainer({setTravelSection, setArtSection}: PageContainerProps) {
             if (artRef.current) {
                 observer.unobserve(artRef.current);
             }
-        }
+        };
     }, [artRef]);
 
     return (
         <div className="overflow-y-scroll bg-white bg-opacity-50 h-full w-full rounded-lg">
             <Home></Home>
-            <ServicesPage></ServicesPage>
+            <TravelServices></TravelServices>
             <ExperiencePage></ExperiencePage>
-            <ReviewsPage></ReviewsPage>
-            <Inquiry></Inquiry>
             <div ref={artRef}>
+                <ArtServices></ArtServices>
                 <ArtGallery></ArtGallery>
+                <ReviewsAndInquiries></ReviewsAndInquiries>
                 <ThankYou></ThankYou>
             </div>
         </div>

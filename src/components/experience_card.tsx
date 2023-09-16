@@ -7,7 +7,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ title, image, description }: ExperienceCardProps) {
     return (
-        <div className="bg-white flex flex-col lg:flex-row w-full rounded-md shadow-2xl">
+        <div className="bg-white flex flex-col lg:flex-row rounded-md px-24">
             <div className="flex justify-center items-center">
                 <img
                     className="max-h-96 w-auto p-4 rounded-md"

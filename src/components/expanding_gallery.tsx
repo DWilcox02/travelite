@@ -28,7 +28,7 @@ function ImageCard({ image, openImage }: ImageCardProps) {
             <img
                 src={image.src}
                 alt={image.alt}
-                className="rounded-md transition-all scale-90 hover:scale-100"
+                className="max-h-96 rounded-md transition-all scale-90 hover:scale-100 cursor-pointer"
                 onClick={() => openImage(image)}
             />
         </div>
@@ -37,7 +37,7 @@ function ImageCard({ image, openImage }: ImageCardProps) {
 
 function ImageColumn({ images, openImage }: ImageColumnProps) {
     return (
-        <div>
+        <div className="flex flex-col justify-center items-center">
             {images.map((image) => (
                 <ImageCard image={image} openImage={openImage}></ImageCard>
             ))}
@@ -61,8 +61,7 @@ function ExpandingGallery({
     };
 
     return (
-        <div className="">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <ImageColumn
                     images={images1}
                     openImage={openImage}
@@ -85,7 +84,7 @@ function ExpandingGallery({
                                 className="w-auto max-h-[32rem]"
                             />
                             <button
-                                className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-none transition-all"
+                                className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-pointer transition-all"
                                 onClick={closeImage}
                             >
                                 Close
@@ -94,7 +93,6 @@ function ExpandingGallery({
                     </div>
                 )}
             </div>
-        </div>
     );
 }
 

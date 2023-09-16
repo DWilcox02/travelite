@@ -1,10 +1,10 @@
-import { Heading1 } from "./headings";
+import { Heading2 } from "./headings";
 
 function AboutPage() {
     return (
         <div className="w-full flex flex-col py-4">
             <div className="m-4 p-4 bg-white bg-opacity-30 rounded-md text-black">
-                <Heading1 text="About Me..." colour="black"></Heading1>
+                <Heading2 text="About Me..." colour="black"></Heading2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Integer at metus ultricies, vulputate felis nec, tincidunt

@@ -6,7 +6,7 @@ interface ReviewCardProps {
 
 function ReviewCard({ review }: ReviewCardProps) {
     return (
-        <div className="overflow-visible relative items-center bg-slate-400 rounded-md w-full max-w-md flex gap-6 shadow-lg">
+        <div className="overflow-visible relative items-center bg-slate-400 rounded-md w-full flex gap-6 shadow-lg">
             <img
                 className="absolute inset-0 shadow-2xl rounded-full w-24 h-24 -left-6 -top-1"
                 src={review.image}
