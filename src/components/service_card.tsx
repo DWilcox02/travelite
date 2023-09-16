@@ -13,7 +13,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 alt=""
             />
             <div className="h-full p-4">
-                <h3 className="text-xl">{service.name}</h3>
+                <h3 className="text-xl">{service.name.toLocaleUpperCase()}</h3>
                 <p>{service.description}</p>
             </div>
         </div>

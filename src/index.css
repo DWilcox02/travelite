@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cholvine;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,9 +11,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
+p {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+hr {
+  border-color: black;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Morgiah;
+  src: url(/fonts/MORGIAH.otf);
+}
+
+@font-face {
+  font-family: Cholvine;
+  src: url(/fonts/Cholvine.ttf);
+}
+
+@font-face {
+  font-family: Franchise;
+  src: url(/fonts/franchise_2/Franchise.ttf);
+}
 
 /* Style the video container */
 .bg-video-container {

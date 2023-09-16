@@ -6,11 +6,11 @@ function Home() {
 
     return (
         <div className="flex flex-col justify-center items-center h-full">
-            <h1 className="text-4xl">
-                Emma Taylor
+            <h1 className="text-6xl">
+                EMMA TAYLOR
             </h1>
             <h2>
-                Travel & Art for you
+                TRAVEL & ART FOR YOU
             </h2>
             <div className="flex justify-center items-center pt-4">
                     <ContactTag

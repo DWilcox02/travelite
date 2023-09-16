@@ -39,7 +39,7 @@ function Inquiry() {
                                 name="name"
                                 placeholder="name"
                                 ref={nameInputRef}
-                                className="rounded-md"
+                                className="rounded-md font-sans"
                             />
                         </div>
 
@@ -52,7 +52,7 @@ function Inquiry() {
                                 name="email"
                                 placeholder="email"
                                 ref={emailInputRef}
-                                className="rounded-md"
+                                className="rounded-md font-sans"
                             />
                         </div>
 
@@ -65,7 +65,7 @@ function Inquiry() {
                                 name="emailConfirm"
                                 placeholder="confirm email"
                                 ref={confirmEmailInputRef}
-                                className="rounded-md"
+                                className="rounded-md font-sans"
                             />
                         </div>
 
@@ -77,7 +77,7 @@ function Inquiry() {
                                 name="description"
                                 placeholder="description"
                                 ref={inquiryInputRef}
-                                className="rounded-md"
+                                className="rounded-md font-sans"
                             />
                         </div>
 
@@ -86,7 +86,7 @@ function Inquiry() {
                                 className="rounded-md bg-white bg-opacity-100 w-fit px-4 py-2 mb-4 hover:bg-pink-300 transition-all"
                                 type="submit"
                             >
-                                Submit
+                                SUBMIT
                             </button>
                         </div>
                     </form>
