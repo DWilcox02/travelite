@@ -1,6 +1,6 @@
 import Home from "./home";
 import ExperiencePage from "./experience_page";
-import AboutPage from "./about_page";
+// import AboutPage from "./about_page";
 import ServicesPage from "./services_page";
 import Inquiry from "./inquiries";
 import ThankYou from "./thank_you";
@@ -11,7 +11,6 @@ function PageContainer() {
             <Home></Home>
             <ServicesPage></ServicesPage>
             <ExperiencePage></ExperiencePage>
-            <AboutPage></AboutPage>
             <Inquiry></Inquiry>
             <ThankYou></ThankYou>
         </div>

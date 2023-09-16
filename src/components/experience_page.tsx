@@ -1,10 +1,10 @@
 import { Carousel } from "flowbite-react";
-import experiencesData from "../data/experience_data.json";
+import EXPERIENCE_DATA from "../data/experience_data.json";
 import ExperienceCard from "./experience_card";
 import { Heading1 } from "./headings";
 
 function ExperiencePage() {
-    const items = experiencesData.map((data) => {
+    const items = EXPERIENCE_DATA.map((data) => {
         return (
             <ExperienceCard
                 title={data.title}

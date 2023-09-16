@@ -1,5 +1,5 @@
 import ContactTag from "./contact_tag";
-import contactDetails from "../data/contact_data.json";
+import CONTACT_DATA from "../data/contact_data.json";
 import {AiFillInstagram, AiFillMail, AiOutlineTwitter, AiFillFacebook, AiFillLinkedin} from "react-icons/ai";
 
 function Home() {
@@ -16,27 +16,27 @@ function Home() {
                     <ContactTag
                         title="Email"
                         icon={AiFillMail}
-                        link={`mailto:${contactDetails.email}`}
+                        link={`mailto:${CONTACT_DATA.email}`}
                     ></ContactTag>
                     <ContactTag
                         title="Instagram"
                         icon={AiFillInstagram}
-                        link={contactDetails.instagram}
+                        link={CONTACT_DATA.instagram}
                     ></ContactTag>
                     <ContactTag
                         title="Twitter"
                         icon={AiOutlineTwitter}
-                        link={contactDetails.twitter}
+                        link={CONTACT_DATA.twitter}
                     ></ContactTag>
                     <ContactTag
                         title="Facebook"
                         icon={AiFillFacebook}
-                        link={contactDetails.facebook}
+                        link={CONTACT_DATA.facebook}
                     ></ContactTag>
                     <ContactTag
                         title="LinkedIn"
                         icon={AiFillLinkedin}
-                        link={contactDetails.linkedin}
+                        link={CONTACT_DATA.linkedin}
                     ></ContactTag>
                 </div>
         </div>
