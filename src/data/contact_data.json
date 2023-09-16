@@ -1,4 +1,7 @@
 {
     "email": "example.email@gmail.com",
-    "instagram": "@instagram"
+    "instagram": "https://www.instagram.com",
+    "facebook": "https://www.facebook.com",
+    "twitter": "https://www.twitter.com",
+    "linkedin": "https://www.linkedin.com"
 }

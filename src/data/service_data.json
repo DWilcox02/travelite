@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Service 1",
+        "price": 69,
+        "description": "Description/subtitle",
+        "image": "/services/dandelion.jpg"
+    },
+    {
+        "name": "Service 2",
+        "price": 420,
+        "description": "Description/subtitle",
+        "image": "/services/rose.jpg"
+    },
+    {
+        "name": "Service 3",
+        "price": 69420,
+        "description": "Description/subtitle",
+        "image": "/services/morning_glory.jpg"
+    }
+]

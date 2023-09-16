@@ -2,7 +2,7 @@ import { Heading1 } from "./headings";
 
 function AboutPage() {
     return (
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col py-4">
             <div className="m-4 p-4 bg-white bg-opacity-30 rounded-md text-black">
                 <Heading1 text="About Me..." colour="black"></Heading1>
                 <p>
