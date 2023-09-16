@@ -83,7 +83,7 @@ function Inquiry() {
 
                         <div className="flex flex-col justify-center items-center">
                             <button
-                                className="rounded-md bg-white bg-opacity-100 w-fit px-4 py-2 hover:bg-pink-300 transition-all"
+                                className="rounded-md bg-white bg-opacity-100 w-fit px-4 py-2 mb-4 hover:bg-pink-300 transition-all"
                                 type="submit"
                             >
                                 Submit

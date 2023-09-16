@@ -1,0 +1,38 @@
+[
+    [
+        {
+            "id": 0,
+            "src": "/gallery_art/penguin1.jpg",
+            "alt": "penguin1"
+        },
+        {
+            "id": 1,
+            "src": "/gallery_art/penguin2.jpg",
+            "alt": "penguin2"
+        }
+    ],
+    [
+        {
+            "id": 2,
+            "src": "/gallery_art/penguin3.jpg",
+            "alt": "penguin3"
+        },
+        {
+            "id": 3,
+            "src": "/gallery_art/penguin4.jpg",
+            "alt": "penguin4"
+        }
+    ],
+    [
+        {
+            "id": 4,
+            "src": "/gallery_art/penguin5.jpg",
+            "alt": "penguin5"
+        },
+        {
+            "id": 5,
+            "src": "/gallery_art/penguin6.jpg",
+            "alt": "penguin6"
+        }
+    ]
+]
