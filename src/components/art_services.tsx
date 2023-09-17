@@ -1,17 +1,41 @@
 import { Heading2 } from "./headings";
 import ServiceCard from "./service_card";
-import MOCK_SERVICES from "../data/travel_service_data.json";
-
+import MOCK_SERVICES from "../data/art_service_data.json";
+import { useState } from "react";
+import Examples from "./examples";
+import { Collapse, initTE } from "tw-elements";
+import Service from "../classes/service";
 
 function ArtServices() {
+    const [currentService, setCurrentService] = useState<Service | null>(null);
+
+    initTE(Collapse);
     return (
-        <div className="w-full flex flex-col p-4">
-            <div className="rounded-md bg-white bg-opacity-30">
+        <div className={`w-full flex flex-col p-4 transition-all duration-500`}>
+            <div
+                className={`rounded-md bg-white bg-opacity-30 transition-all duration-500 ${!currentService ? "pb-2" : "pb-5"}`}
+            >
                 <Heading2 text="Art Services" colour="black"></Heading2>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 m-4">
-                    <ServiceCard service={MOCK_SERVICES[0]}></ServiceCard>
-                    <ServiceCard service={MOCK_SERVICES[1]}></ServiceCard>
-                    <ServiceCard service={MOCK_SERVICES[2]}></ServiceCard>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 md:flex-row justify-between items-center gap-4 mx-4 z-20">
+                    {MOCK_SERVICES.map((service) => (
+                        <div key={service.id}>
+                            <div
+                                className="z-30"
+                            >
+                                <ServiceCard
+                                    service={service}
+                                    currentService={currentService}
+                                    setCurrService={setCurrentService}
+                                ></ServiceCard>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div
+                    className={`transition-all duration-150 ease-in-out`}
+                    id="examples"
+                >
+                    <Examples service={currentService}></Examples>
                 </div>
             </div>
         </div>

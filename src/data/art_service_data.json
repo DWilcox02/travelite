@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Pet Painting",
+        "price": 69,
+        "description": "Pet Painting",
+        "image": "/services/molly.jpg",
+        "examples": [
+            "/services/molly.jpg"
+        ],
+        "id": 1
+    },
+    {
+        "name": "Digital Art Commissions",
+        "price": 420,
+        "description": "Digital Art Commissions",
+        "image": "/services/marijuana.jpg",
+        "examples": [
+            "/services/molly.jpg",
+            "/services/molly.jpg"
+        ],
+        "id": 2
+    },
+    {
+        "name": "Non-Pet Portraits",
+        "price": 69420,
+        "description": "Non-Pet Portraits",
+        "image": "/services/boobs.png",
+        "examples": [
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg"
+        ],
+        "id": 3
+    },
+    {
+        "name": "New Projects",
+        "price": 69420,
+        "description": "New Projects",
+        "image": "/services/el_tio.jpg",
+        "examples": [
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg"
+        ],
+        "id": 4
+    },
+    {
+        "name": "Other Painting Services",
+        "price": 69420,
+        "description": "Other Painting Services",
+        "image": "/services/pigeon.jpg",
+        "examples": [
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg",
+            "/services/molly.jpg"
+        ],
+        "id": 5
+    }
+]

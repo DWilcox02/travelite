@@ -1,12 +1,10 @@
-class Service {
-    constructor(
-        public name: string,
-        public price: number,
-        public description: string,
-        public image: string
-    ) {
-
-    }
+interface Service {
+    name: string
+    price: number
+    description: string
+    image: string
+    examples: string[]
+    id: number
 }
 
-export {Service};
+export default Service;

@@ -17,7 +17,8 @@ function PageContainer({
     setTravelSection,
     setArtSection,
 }: PageContainerProps) {
-    const artRef = useRef(null);
+    const artRef = useRef<HTMLDivElement>(null);
+    const travelRef = useRef<HTMLDivElement>(null);
 
     const callbackFunction = (entries: IntersectionObserverEntry[]) => {
         const [entry] = entries; // first and only entry
@@ -30,27 +31,29 @@ function PageContainer({
 
     useEffect(() => {
         const observer = new IntersectionObserver(callbackFunction);
-        if (artRef.current) {
-            observer.observe(artRef.current);
+        if (travelRef.current) {
+            observer.observe(travelRef.current);
         }
 
         return () => {
-            if (artRef.current) {
-                observer.unobserve(artRef.current);
+            if (travelRef.current) {
+                observer.unobserve(travelRef.current);
             }
         };
-    }, [artRef]);
+    }, [travelRef]);
 
     return (
         <div className="overflow-y-scroll bg-white bg-opacity-50 h-full w-full rounded-lg">
-            <Home></Home>
-            <TravelServices></TravelServices>
-            <ExperiencePage></ExperiencePage>
+            <Home artId={artRef} travelId={travelRef}></Home>
             <div ref={artRef}>
                 <ArtServices></ArtServices>
                 <ArtGallery></ArtGallery>
+            </div>
+            <div ref={travelRef}>
+                <TravelServices></TravelServices>
+                <ExperiencePage></ExperiencePage>
                 <ReviewsAndInquiries></ReviewsAndInquiries>
-                <ThankYou></ThankYou>
+            <ThankYou></ThankYou>
             </div>
         </div>
     );

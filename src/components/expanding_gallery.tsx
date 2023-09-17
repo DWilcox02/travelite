@@ -39,7 +39,9 @@ function ImageColumn({ images, openImage }: ImageColumnProps) {
     return (
         <div className="flex flex-col justify-center items-center">
             {images.map((image) => (
-                <ImageCard image={image} openImage={openImage}></ImageCard>
+                <div key={image.id}>
+                    <ImageCard image={image} openImage={openImage}></ImageCard>
+                </div>
             ))}
         </div>
     );
