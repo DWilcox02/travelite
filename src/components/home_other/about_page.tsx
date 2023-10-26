@@ -1,4 +1,4 @@
-import { Heading2 } from "./headings";
+import { Heading2 } from "../headings";
 
 function AboutPage() {
     return (

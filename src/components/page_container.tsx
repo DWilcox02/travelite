@@ -1,12 +1,11 @@
-import Home from "./home";
-import ExperiencePage from "./experience_page";
+/* eslint-disable react-hooks/exhaustive-deps */
+import Home from "./home_other/home";
 // import AboutPage from "./about_page";
-import TravelServices from "./travel_services";
-import ReviewsAndInquiries from "./reviews_and_inquiries";
-import ThankYou from "./thank_you";
-import ArtGallery from "./art_gallery";
+import ThankYou from "./home_other/thank_you";
+import ArtGallery from "./art_components/art_gallery";
 import { useEffect, useRef } from "react";
-import ArtServices from "./art_services";
+import ArtServices from "./art_components/art_services";
+import ReviewsAndInquiries from "./reviews_inquiries/reviews_and_inquiries";
 
 interface PageContainerProps {
     setTravelSection: () => void;
@@ -49,12 +48,14 @@ function PageContainer({
                 <ArtServices></ArtServices>
                 <ArtGallery></ArtGallery>
             </div>
-            <div ref={travelRef}>
+            <ReviewsAndInquiries></ReviewsAndInquiries>
+            <ThankYou></ThankYou>
+            {/* <div ref={travelRef}>
                 <TravelServices></TravelServices>
                 <ExperiencePage></ExperiencePage>
-                <ReviewsAndInquiries></ReviewsAndInquiries>
-            <ThankYou></ThankYou>
-            </div>
+                
+            
+            </div> */}
         </div>
     );
 }

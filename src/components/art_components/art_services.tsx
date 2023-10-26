@@ -1,14 +1,15 @@
-import { Heading2 } from "./headings";
+import { Heading2 } from "../headings";
 import ServiceCard from "./service_card";
-import MOCK_SERVICES from "../data/art_service_data.json";
+import MOCK_SERVICES from "../../data/art_service_data.json";
 import { useState } from "react";
 import Examples from "./examples";
 import { Collapse, initTE } from "tw-elements";
-import Service from "../classes/service";
+import Service from "../../classes/service";
+import { useMediaQuery } from 'react-responsive';
 
 function ArtServices() {
     const [currentService, setCurrentService] = useState<Service | null>(null);
-
+    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
     initTE(Collapse);
     return (
         <div className={`w-full flex flex-col p-4 transition-all duration-500`}>
@@ -27,6 +28,12 @@ function ArtServices() {
                                     currentService={currentService}
                                     setCurrService={setCurrentService}
                                 ></ServiceCard>
+                                <div
+                                    className={`transition-all duration-150 ease-in-out`}
+                                    id="examples"
+                                >
+                                    {isMobile && currentService != null && currentService.id == service.id && <Examples service={currentService}></Examples>}
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -35,7 +42,7 @@ function ArtServices() {
                     className={`transition-all duration-150 ease-in-out`}
                     id="examples"
                 >
-                    <Examples service={currentService}></Examples>
+                    {!isMobile && <Examples service={currentService}></Examples>}
                 </div>
             </div>
         </div>

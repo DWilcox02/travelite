@@ -1,5 +1,5 @@
 import { FormEvent, useRef } from "react";
-import { Heading1 } from "./headings";
+import { Heading1 } from "../headings";
 
 function Inquiry() {
     const nameInputRef = useRef<HTMLInputElement>(null);

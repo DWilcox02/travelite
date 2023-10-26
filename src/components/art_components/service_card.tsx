@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Service from "../classes/service";
+import Service from "../../classes/service";
 
 interface ServiceCardProps {
     service: Service;

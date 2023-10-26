@@ -1,6 +1,6 @@
 import ExpandingGallery from "./expanding_gallery";
-import GALLERY_ART_DATA from "../data/gallery_art_data.json";
-import { Heading2 } from "./headings";
+import GALLERY_ART_DATA from "../../data/gallery_art_data.json";
+import { Heading2 } from "../headings";
 
 function ArtGallery() {
 

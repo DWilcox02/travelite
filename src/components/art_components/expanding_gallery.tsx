@@ -78,7 +78,7 @@ function ExpandingGallery({
                 ></ImageColumn>
 
                 {selectedImage && (
-                    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center transition-all">
+                    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center transition-all z-40">
                         <div className="max-w-3xl bg-white p-4 rounded-lg mx-2">
                             <img
                                 src={selectedImage.src}
