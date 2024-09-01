@@ -1,15 +1,15 @@
 import { Heading2 } from "../common_components/headings"
+import PET_SERVICES from "../../data/pet_service_data.json"
+import ServiceCollection from "../common_components/service_collection"
 
 function PetSittingServices() {
   return (
-    <div className="w-full flex flex-col p-4">
-      <div className="rounded-md bg-white bg-opacity-30">
-        <Heading2 text="Pet Sitting" colour="black"></Heading2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 m-4">
-          {/* <ServiceCard ></ServiceCard>
-                    <ServiceCard service={MOCK_SERVICES[1]}></ServiceCard>
-                    <ServiceCard service={MOCK_SERVICES[2]}></ServiceCard> */}
-        </div>
+    <div className={`w-full flex flex-col p-4 transition-all duration-700`}>
+      <div
+        className={`rounded-md bg-white bg-opacity-30 transition-all duration-700 pb-5}`}
+      >
+        <Heading2 text="Pet Sitting Services" colour="black"></Heading2>
+        <ServiceCollection services={PET_SERVICES}></ServiceCollection>
       </div>
     </div>
   )

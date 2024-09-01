@@ -51,10 +51,10 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
 
     return (
         <>
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:flex-row justify-between items-center gap-4 mx-4 z-20`}>
+            <div className={`flex flex-row justify-around items-center mx-4 z-20`}>
                 {services.map((service) => (
                     <div key={service.id}>
-                        <div className="z-30">
+                        <div className="z-30 ">
                             <ServiceCard
                                 service={service}
                                 currentService={currentService}
@@ -63,7 +63,7 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
                         </div>
                         {isMobile && currentService?.id === service.id && (
                             <div
-                                className={`transition-all ease-in-out duration-700 overflow-hidden ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
+                                className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[1000px] pb-10' : 'max-h-0'}`}
                                 style={{ maxHeight: isExpanded ? '500px' : '0px' }}
                                 id="examples"
                             >
@@ -76,7 +76,7 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
             </div>
             {!isMobile && (
                 <div
-                    className={`transition-all ease-in-out duration-700 overflow-hidden ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
+                    className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[1000px] pb-10' : 'max-h-0'}`}
                     style={{ maxHeight: isExpanded ? '500px' : '0px' }}
                     id="examples"
                 >
