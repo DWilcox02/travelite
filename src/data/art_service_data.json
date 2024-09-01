@@ -2,7 +2,7 @@
     {
         "name": "Pet Paintings",
         "price": 69,
-        "description": "Pet Paintings",
+        "description": "Pet Paintings Desc",
         "image": "/art/chester.png",
         "examples": [],
         "id": 1
@@ -10,7 +10,7 @@
     {
         "name": "Non-Pet Paintings",
         "price": 69420,
-        "description": "Non-Pet Portraits",
+        "description": "Non-Pet Portraits Desc",
         "image": "/art/flower_girl.JPG",
         "examples": [],
         "id": 3
@@ -18,7 +18,7 @@
     {
         "name": "Current Projects",
         "price": 69420,
-        "description": "Current Projects",
+        "description": "Current Projects Desc",
         "image": "/art/beach.png",
         "examples": [],
         "id": 4
@@ -26,7 +26,7 @@
     {
         "name": "Mural Services",
         "price": 69420,
-        "description": "Mural Services",
+        "description": "Mural Services Desc",
         "image": "/art/cougar.jpeg",
         "examples": [],
         "id": 5

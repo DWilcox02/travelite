@@ -2,6 +2,7 @@ import ContactTag from "./contact_tag";
 import CONTACT_DATA from "../../data/contact_data.json";
 import SectionButton from "./section_button";
 import HomeImage from "./home_image";
+import { useMediaQuery } from 'react-responsive';
 
 import {
     AiFillInstagram,
@@ -18,9 +19,11 @@ interface HomeProps {
 }
 
 function Home({ artId, travelId }: HomeProps) {
+    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+
     return (
         <div className=" flex flex-row justify-around items-center h-full">
-            <HomeImage source="/pets/cat_cafe.jpg"></HomeImage>
+            {!isMobile && <HomeImage source="/pets/cat_cafe.jpg"></HomeImage>}
             <div className="flex flex-col justify-center items-center h-full">
                 <h1 className="text-6xl font-['Evagrande']">EMMA TAYLOR</h1>
                 <h2 className="text-3xl font-['Buydog']">painter. traveller. dilly-dallier.</h2>
@@ -57,7 +60,7 @@ function Home({ artId, travelId }: HomeProps) {
                 </div>
                 <img className="w-20 h-20" src="/down_arrow_2.gif" alt="" />
             </div>
-            <HomeImage source="/pets/chester_1.jpg"></HomeImage>
+            {!isMobile && <HomeImage source="/pets/chester_1.jpg"></HomeImage>}
         </div>
     );
 }

@@ -1,10 +1,6 @@
-import Service from "../../classes/service";
+import { SmallDescProps } from "../common_components/small_desc";
 
-interface ServiceDescLargeProps {
-    service: Service | null;
-}
-
-function ServiceDescLarge({ service }: ServiceDescLargeProps) {
+function PetDescLarge({ service }: SmallDescProps) {
     return (
         <div className={`my-4 mx-6 transition-all ${service ? "opacity-100" : "opacity-0"}`}>
             <hr />
@@ -14,4 +10,4 @@ function ServiceDescLarge({ service }: ServiceDescLargeProps) {
     );
 }
 
-export default ServiceDescLarge;
+export default PetDescLarge

@@ -33,7 +33,7 @@ function ServiceCard({
 
     return (
         <div
-            className={`flex flex-col bg-white bg-opacity-30 rounded-tr-3xl rounded-bl-3xl ${selected ? "md:scale-100" : "md:scale-95"} md:hover:scale-105 transition-all shadow-2xl cursor-pointer`}
+            className={`flex flex-col my-5 bg-white bg-opacity-30 rounded-tr-3xl rounded-bl-3xl ${selected ? "md:scale-100" : "md:scale-95"} md:hover:scale-105 transition-all shadow-2xl cursor-pointer`}
             onClick={handleClick}
         >
             <img

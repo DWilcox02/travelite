@@ -1,10 +1,6 @@
-import Service from "../../classes/service";
+import { SmallDescProps } from "../common_components/small_desc";
 
-interface ServiceDescSmallProps {
-    service: Service | null;
-}
-
-function ServiceDescSmall({ service }: ServiceDescSmallProps) {
+function ArtDescSmall({ service }: SmallDescProps) {
     return (
         <div className={`my-4 mx-6 transition-all ${service ? "opacity-100" : "opacity-0"}`}>
             <hr />
@@ -13,4 +9,4 @@ function ServiceDescSmall({ service }: ServiceDescSmallProps) {
     );
 }
 
-export default ServiceDescSmall;
+export default ArtDescSmall

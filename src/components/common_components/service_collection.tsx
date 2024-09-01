@@ -1,30 +1,32 @@
 import ServiceCard from "./service_card";
 import { useState, useEffect } from "react";
-import ServiceDescLarge from "../common_components/service_desc_large";
-import ServiceDescSmall from "../common_components/service_desc_small";
-import { Collapse, initTE } from "tw-elements";
 import Service from "../../classes/service";
 import { useMediaQuery } from 'react-responsive';
+import { SmallDescProps } from "./small_desc";
+import { LargeDescProps } from "./large_desc";
 
 interface ServiceCollectionProps {
     services: Service[];
+    renderSmallServiceDesc: ({ service }: SmallDescProps) => JSX.Element;
+    renderLargeServiceDesc: ({ service }: LargeDescProps) => JSX.Element;
 }
 
-function ServiceCollection({ services }: ServiceCollectionProps) {
+function ServiceCollection({ services, renderSmallServiceDesc, renderLargeServiceDesc }: ServiceCollectionProps) {
     const [currentService, setCurrentService] = useState<Service | null>(null);
     const [contentSelected, setContentSelected] = useState<boolean>(false);
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [isContentVisible, setIsContentVisible] = useState<boolean>(false);
     const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
-    initTE(Collapse);
-
     useEffect(() => {
         if (contentSelected) {
-            setIsContentVisible(true);  // Show content immediately
+            setIsContentVisible(true);
             setIsExpanded(true);
         } else {
-            setIsExpanded(false);  // Start collapsing the component
+            setIsExpanded(false);
+            setTimeout(() => {
+                setIsContentVisible(false);
+            }, 700); // This timeout should match the transition duration
         }
     }, [contentSelected]);
 
@@ -36,9 +38,8 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
     const collapseService = () => {
         setContentSelected(false);
         setTimeout(() => {
-            setIsContentVisible(false);
             setCurrentService(null);
-        }, 700);
+        }, 700); // Ensures the content is hidden before the service is cleared
     }
 
     const handleServiceClick = (service: Service | null) => {
@@ -51,10 +52,10 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
 
     return (
         <>
-            <div className={`flex flex-row justify-around items-center mx-4 z-20`}>
+            <div className={`flex flex-col md:flex-row lg:flex-row justify-around items-center mx-4 z-20`}>
                 {services.map((service) => (
                     <div key={service.id}>
-                        <div className="z-30 ">
+                        <div className="z-30">
                             <ServiceCard
                                 service={service}
                                 currentService={currentService}
@@ -63,29 +64,25 @@ function ServiceCollection({ services }: ServiceCollectionProps) {
                         </div>
                         {isMobile && currentService?.id === service.id && (
                             <div
-                                className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[1000px] pb-10' : 'max-h-0'}`}
-                                style={{ maxHeight: isExpanded ? '500px' : '0px' }}
+                                className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[500px]' : 'max-h-0'}`}
                                 id="examples"
                             >
-                                {isContentVisible && (
-                                    <ServiceDescSmall service={currentService}></ServiceDescSmall>
-                                )}
-                            </div>)}
+                                {isContentVisible && renderSmallServiceDesc({ service: currentService })}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
             {!isMobile && (
                 <div
-                    className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[1000px] pb-10' : 'max-h-0'}`}
-                    style={{ maxHeight: isExpanded ? '500px' : '0px' }}
+                    className={`transition-all ease-in-out duration-700 overflow-hidden pb-5 ${isExpanded ? 'max-h-[500px]' : 'max-h-0'}`}
                     id="examples"
                 >
-                    {isContentVisible && (
-                        <ServiceDescLarge service={currentService}></ServiceDescLarge>
-                    )}
+                    {isContentVisible && renderLargeServiceDesc({ service: currentService })}
                 </div>
-            )}</>
-    )
+            )}
+        </>
+    );
 }
 
-export default ServiceCollection
+export default ServiceCollection;
