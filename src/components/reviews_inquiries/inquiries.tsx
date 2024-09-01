@@ -1,5 +1,5 @@
 // import { FormEvent, SyntheticEvent, useRef } from "react";
-import { Heading1 } from "../headings";
+import { Heading1 } from "../common_components/headings";
 import { WEB3_ACCESS_KEY } from "../../secrets/secrets";
 import { SyntheticEvent, useRef } from "react";
 

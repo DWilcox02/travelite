@@ -1,6 +1,6 @@
 import REVIEW_DATA from "../../data/review_data.json";
 import ReviewCard from "./review_card";
-import { Heading1 } from "../headings";
+import { Heading1 } from "../common_components/headings";
 
 function ReviewsPage() {
     return (

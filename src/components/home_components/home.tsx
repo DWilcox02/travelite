@@ -1,6 +1,6 @@
 import ContactTag from "./contact_tag";
 import CONTACT_DATA from "../../data/contact_data.json";
-import SectionButton from "../section_button";
+import SectionButton from "./section_button";
 
 import {
     AiFillInstagram,

@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Home from "./home_other/home";
+import Home from "./home_components/home";
 // import AboutPage from "./about_page";
-import ThankYou from "./home_other/thank_you";
+import ThankYou from "./home_components/thank_you";
 import ArtGallery from "./art_components/art_gallery";
 import { useEffect, useRef } from "react";
 import ArtServices from "./art_components/art_services";
+import PetSittingServices from "./pet_sitting_components/pet_sitting_services";
 import ReviewsAndInquiries from "./reviews_inquiries/reviews_and_inquiries";
 
 interface PageContainerProps {
@@ -47,6 +48,9 @@ function PageContainer({
             <div ref={artRef}>
                 <ArtServices></ArtServices>
                 <ArtGallery></ArtGallery>
+            </div>
+            <div ref={petSittingRef}>
+                <PetSittingServices></PetSittingServices>
             </div>
             <ReviewsAndInquiries></ReviewsAndInquiries>
             <ThankYou></ThankYou>

@@ -1,4 +1,4 @@
-import { Heading2 } from "../headings";
+import { Heading2 } from "../common_components/headings";
 import ServiceCard from "./service_card";
 import MOCK_SERVICES from "../../data/art_service_data.json";
 import { useState, useEffect } from "react";
