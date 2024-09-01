@@ -20,9 +20,7 @@ function ArtServices() {
     useEffect(() => {
         if (contentSelected) {
             setIsContentVisible(true);  // Show content immediately
-            setTimeout(() => {
-                setIsExpanded(true);  // Expand the component smoothly
-            }, 50);  // Small delay to ensure transition triggers correctly
+            setIsExpanded(true);
         } else {
             setIsExpanded(false);  // Start collapsing the component
         }
@@ -38,7 +36,7 @@ function ArtServices() {
         setTimeout(() => {
             setIsContentVisible(false);
             setCurrentService(null);
-        }, 600);
+        }, 700);
     }
 
     const handleServiceClick = (service: Service | null) => {
@@ -50,9 +48,9 @@ function ArtServices() {
     };
 
     return (
-        <div className={`w-full flex flex-col p-4 transition-all duration-500`}>
+        <div className={`w-full flex flex-col p-4 transition-all duration-700`}>
             <div
-                className={`rounded-md bg-white bg-opacity-30 transition-all duration-500 pb-5}`}
+                className={`rounded-md bg-white bg-opacity-30 transition-all duration-700 pb-5}`}
             >
                 <Heading2 text="Art Services" colour="black"></Heading2>
                 <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:flex-row justify-between items-center gap-4 mx-4 z-20`}>
@@ -67,7 +65,7 @@ function ArtServices() {
                             </div>
                             {isMobile && currentService?.id === service.id && (
                                 <div
-                                    className={`transition-all duration-700 ease-in-out overflow-hidden mb-5 ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
+                                    className={`transition-all ease-in-out duration-700 overflow-hidden ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
                                     style={{ maxHeight: isExpanded ? '500px' : '0px' }}
                                     id="examples"
                                 >
@@ -80,7 +78,7 @@ function ArtServices() {
                 </div>
                 {!isMobile && (
                     <div
-                        className={`transition-all duration-700 ease-in-out overflow-hidden mb-5 ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
+                        className={`transition-all ease-in-out duration-700 overflow-hidden ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
                         style={{ maxHeight: isExpanded ? '500px' : '0px' }}
                         id="examples"
                     >
