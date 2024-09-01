@@ -4,20 +4,15 @@
         "price": 69,
         "description": "Pet Paintings",
         "image": "/art/chester.png",
-        "examples": [
-            "/art/manon.png",
-            "/art/sully_unfinished.jpg"
-        ],
+        "examples": [],
         "id": 1
     },
     {
-        "name": "Non-Pet Portraits",
+        "name": "Non-Pet Paintings",
         "price": 69420,
         "description": "Non-Pet Portraits",
         "image": "/art/flower_girl.JPG",
-        "examples": [
-            "/art/grandad.jpeg"
-        ],
+        "examples": [],
         "id": 3
     },
     {
@@ -25,9 +20,7 @@
         "price": 69420,
         "description": "Current Projects",
         "image": "/art/beach.png",
-        "examples": [
-            "/art/spooky_bath.jpeg"
-        ],
+        "examples": [],
         "id": 4
     },
     {
@@ -35,9 +28,7 @@
         "price": 69420,
         "description": "Mural Services",
         "image": "/art/cougar.jpeg",
-        "examples": [
-            "/services/molly.jpg"
-        ],
+        "examples": [],
         "id": 5
     }
 ]

@@ -2,37 +2,43 @@
     [
         {
             "id": 0,
-            "src": "/gallery_art/penguin1.jpg",
-            "alt": "penguin1"
+            "src": "/art/manon.png",
+            "alt": "manon",
+            "description": "Manon and Her Dogs, 2020, 50x70cm, Acrylic on canvas"
         },
         {
             "id": 1,
-            "src": "/gallery_art/penguin2.jpg",
-            "alt": "penguin2"
+            "src": "/art/sully_unfinished.png",
+            "alt": "spooky bath",
+            "description": "Spooky Bath, 2020, 50x70cm, Acrylic on canvas"
         }
     ],
     [
         {
             "id": 2,
-            "src": "/gallery_art/penguin3.jpg",
-            "alt": "penguin3"
+            "src": "/art/lions.png",
+            "alt": "lions",
+            "description": "Lions, 2020, 50x70cm, Acrylic on canvas"
         },
         {
             "id": 3,
-            "src": "/gallery_art/penguin4.jpg",
-            "alt": "penguin4"
+            "src": "/art/grandad.jpeg",
+            "alt": "grandad",
+            "description": "Grandad, 2020, 50x70cm, Acrylic on canvas"
         }
     ],
     [
         {
             "id": 4,
-            "src": "/gallery_art/penguin5.jpg",
-            "alt": "penguin5"
+            "src": "/art/koko.jpeg",
+            "alt": "koko",
+            "description": "Koko, 2020, 50x70cm, Acrylic on canvas"
         },
         {
             "id": 5,
-            "src": "/gallery_art/penguin6.jpg",
-            "alt": "penguin6"
+            "src": "/art/dog.JPG",
+            "alt": "nessim",
+            "description": "Nessim, 2020, 50x70cm, Acrylic on canvas"
         }
     ]
 ]

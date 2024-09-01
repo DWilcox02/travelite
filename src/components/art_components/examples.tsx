@@ -6,20 +6,10 @@ interface ExamplesProps {
 
 function Examples({ service }: ExamplesProps) {
     return (
-        <div className={`my-2 mx-6 transition-all duration-500 ${service ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-4 mx-6 transition-all duration-500 ${service ? "opacity-100" : "opacity-0"}`}>
             <hr />
-            <h1>{service?.description}</h1>
-            {service && <div className="flex flex-col sm:flex-row w-full">
-                {service?.examples.map((example) => (
-                    <div key={example} className=" border-2 border-red-500 mx-auto">
-                        <img
-                            className="rounded-md h-64"
-                            src={example}
-                            alt=""
-                        />
-                    </div>
-                ))}
-            </div>}
+            <h1 className=" text-2xl">{service?.description}</h1>
+            <img className="mx-auto max-h-[32rem] w-auto" src={service?.image} alt="" />
         </div>
     );
 }

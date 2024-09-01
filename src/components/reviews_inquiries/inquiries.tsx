@@ -1,6 +1,7 @@
-import { FormEvent, SyntheticEvent, useRef } from "react";
+// import { FormEvent, SyntheticEvent, useRef } from "react";
 import { Heading1 } from "../headings";
 import { WEB3_ACCESS_KEY } from "../../secrets/secrets";
+import { SyntheticEvent, useRef } from "react";
 
 function Inquiry() {
     const nameInputRef = useRef<HTMLInputElement>(null);
@@ -8,18 +9,18 @@ function Inquiry() {
     const confirmEmailInputRef = useRef<HTMLInputElement>(null);
     const inquiryInputRef = useRef<HTMLTextAreaElement>(null);
 
-    function validateEmail(email1: string, email2: string) {
-        return email1 == email2;
-    }
+    // function validateEmail(email1: string, email2: string) {
+    //     return email1 == email2;
+    // }
 
     async function inquirySubmitHandler(event: SyntheticEvent) {
         event.preventDefault();
-        const enteredName = nameInputRef.current!.value;
-        const enteredEmail = emailInputRef.current!.value;
-        const enteredConfirmedEmail = confirmEmailInputRef.current!.value;
-        const enteredInquiry = inquiryInputRef.current!.value;
+        // const enteredName = nameInputRef.current!.value;
+        // const enteredEmail = emailInputRef.current!.value;
+        // const enteredConfirmedEmail = confirmEmailInputRef.current!.value;
+        // const enteredInquiry = inquiryInputRef.current!.value;
     }
-        
+
 
     return (
         <div className="w-full flex flex-col py-4">
