@@ -1,18 +1,18 @@
 [
     {
-        "name": "Dog Sitting",
-        "price": 69,
-        "description": "Pet Paintings",
-        "image": "/art/chester.png",
-        "examples": [],
-        "id": 1
-    },
-    {
         "name": "Cat Sitting",
         "price": 69420,
-        "description": "Non-Pet Portraits",
-        "image": "/art/flower_girl.JPG",
+        "description": "Cat Sitting",
+        "image": "/pets/coraline_2.jpeg",
         "examples": [],
         "id": 3
+    },
+    {
+        "name": "Dog Sitting",
+        "price": 69,
+        "description": "Dog Sitting",
+        "image": "/pets/harley_1.jpeg",
+        "examples": [],
+        "id": 1
     }
 ]
