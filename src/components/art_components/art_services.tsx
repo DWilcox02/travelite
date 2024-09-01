@@ -2,7 +2,8 @@ import { Heading2 } from "../common_components/headings";
 import ServiceCard from "./service_card";
 import MOCK_SERVICES from "../../data/art_service_data.json";
 import { useState, useEffect } from "react";
-import Examples from "./examples";
+import ServiceDescLarge from "./service_desc_large";
+import ServiceDescSmall from "./service_desc_small";
 import { Collapse, initTE } from "tw-elements";
 import Service from "../../classes/service";
 import { useMediaQuery } from 'react-responsive';
@@ -64,6 +65,16 @@ function ArtServices() {
                                     setCurrService={handleServiceClick}
                                 ></ServiceCard>
                             </div>
+                            {isMobile && currentService?.id === service.id && (
+                                <div
+                                    className={`transition-all duration-700 ease-in-out overflow-hidden mb-5 ${isExpanded ? 'max-h-[1000px] pb-5' : 'max-h-0'}`}
+                                    style={{ maxHeight: isExpanded ? '500px' : '0px' }}
+                                    id="examples"
+                                >
+                                    {isContentVisible && (
+                                        <ServiceDescSmall service={currentService}></ServiceDescSmall>
+                                    )}
+                                </div>)}
                         </div>
                     ))}
                 </div>
@@ -74,7 +85,7 @@ function ArtServices() {
                         id="examples"
                     >
                         {isContentVisible && (
-                            <Examples service={currentService}></Examples>
+                            <ServiceDescLarge service={currentService}></ServiceDescLarge>
                         )}
                     </div>
                 )}
