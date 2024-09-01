@@ -4,7 +4,13 @@
         "price": 69420,
         "description": "Cat Sitting",
         "image": "/pets/coraline_2.jpeg",
-        "examples": [],
+        "examples": [
+            "/pets/chester_2.jpg",
+            "/pets/koko_1.jpeg",
+            "/pets/zuko_1.jpeg",
+            "/pets/zuko_2.jpeg",
+            "/pets/pepper_1.jpg"
+        ],
         "id": 3
     },
     {
@@ -12,7 +18,11 @@
         "price": 69,
         "description": "Dog Sitting",
         "image": "/pets/harley_1.jpeg",
-        "examples": [],
+        "examples": [
+            "/pets/harley_2.jpeg",
+            "/pets/chihuahua.jpg",
+            "/pets/sadie.jpg"
+        ],
         "id": 1
     }
 ]
