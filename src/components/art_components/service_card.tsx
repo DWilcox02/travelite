@@ -22,7 +22,7 @@ function ServiceCard({
         }
     }, [service, currentService]);
 
-    
+
     function handleClick() {
         if (currentService === service) {
             setCurrService(null);

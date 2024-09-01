@@ -17,7 +17,7 @@ function ArtServices() {
                 className={`rounded-md bg-white bg-opacity-30 transition-all duration-500 ${!currentService ? "pb-2" : "pb-5"}`}
             >
                 <Heading2 text="Art Services" colour="black"></Heading2>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 md:flex-row justify-between items-center gap-4 mx-4 z-20">
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:flex-row justify-between items-center gap-4 mx-4 z-20`}>
                     {MOCK_SERVICES.map((service) => (
                         <div key={service.id}>
                             <div
@@ -42,7 +42,7 @@ function ArtServices() {
                     className={`transition-all duration-150 ease-in-out`}
                     id="examples"
                 >
-                    {!isMobile && <Examples service={currentService}></Examples>}
+                    {!isMobile && currentService != null && <Examples service={currentService}></Examples>}
                 </div>
             </div>
         </div>

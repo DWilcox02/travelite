@@ -8,54 +8,48 @@ import ArtServices from "./art_components/art_services";
 import ReviewsAndInquiries from "./reviews_inquiries/reviews_and_inquiries";
 
 interface PageContainerProps {
-    setTravelSection: () => void;
+    setPetSitting: () => void;
     setArtSection: () => void;
 }
 
 function PageContainer({
-    setTravelSection,
+    setPetSitting: setPetSittingSection,
     setArtSection,
 }: PageContainerProps) {
     const artRef = useRef<HTMLDivElement>(null);
-    const travelRef = useRef<HTMLDivElement>(null);
+    const petSittingRef = useRef<HTMLDivElement>(null);
 
     const callbackFunction = (entries: IntersectionObserverEntry[]) => {
         const [entry] = entries; // first and only entry
         if (entry.isIntersecting) {
             setArtSection();
         } else {
-            setTravelSection();
+            setPetSittingSection();
         }
     };
 
     useEffect(() => {
         const observer = new IntersectionObserver(callbackFunction);
-        if (travelRef.current) {
-            observer.observe(travelRef.current);
+        if (petSittingRef.current) {
+            observer.observe(petSittingRef.current);
         }
 
         return () => {
-            if (travelRef.current) {
-                observer.unobserve(travelRef.current);
+            if (petSittingRef.current) {
+                observer.unobserve(petSittingRef.current);
             }
         };
-    }, [travelRef]);
+    }, [petSittingRef]);
 
     return (
         <div className="overflow-y-scroll bg-white bg-opacity-50 h-full w-full rounded-lg">
-            <Home artId={artRef} travelId={travelRef}></Home>
+            <Home artId={artRef} travelId={petSittingRef}></Home>
             <div ref={artRef}>
                 <ArtServices></ArtServices>
                 <ArtGallery></ArtGallery>
             </div>
             <ReviewsAndInquiries></ReviewsAndInquiries>
             <ThankYou></ThankYou>
-            {/* <div ref={travelRef}>
-                <TravelServices></TravelServices>
-                <ExperiencePage></ExperiencePage>
-                
-            
-            </div> */}
         </div>
     );
 }

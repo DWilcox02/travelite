@@ -1,5 +1,6 @@
-import { FormEvent, useRef } from "react";
+import { FormEvent, SyntheticEvent, useRef } from "react";
 import { Heading1 } from "../headings";
+import { WEB3_ACCESS_KEY } from "../../secrets/secrets";
 
 function Inquiry() {
     const nameInputRef = useRef<HTMLInputElement>(null);
@@ -7,19 +8,18 @@ function Inquiry() {
     const confirmEmailInputRef = useRef<HTMLInputElement>(null);
     const inquiryInputRef = useRef<HTMLTextAreaElement>(null);
 
-    function inquirySubmitHandler(event: FormEvent) {
+    function validateEmail(email1: string, email2: string) {
+        return email1 == email2;
+    }
+
+    async function inquirySubmitHandler(event: SyntheticEvent) {
         event.preventDefault();
         const enteredName = nameInputRef.current!.value;
         const enteredEmail = emailInputRef.current!.value;
         const enteredConfirmedEmail = confirmEmailInputRef.current!.value;
         const enteredInquiry = inquiryInputRef.current!.value;
-        console.log([
-            enteredName,
-            enteredEmail,
-            enteredConfirmedEmail,
-            enteredInquiry,
-        ]);
     }
+        
 
     return (
         <div className="w-full flex flex-col py-4">
@@ -28,8 +28,8 @@ function Inquiry() {
                 <div className="flex justify-center items-center px-4">
                     <form
                         onSubmit={inquirySubmitHandler}
-                        className="grid grid-cols-1 gap-4 w-1/2"
                     >
+                        <input type="hidden" name="access_key" value={WEB3_ACCESS_KEY}></input>
                         <div className="flex flex-col">
                             <label className="py-1" htmlFor="name">
                                 Name
@@ -90,10 +90,11 @@ function Inquiry() {
                             </button>
                         </div>
                     </form>
+                    <script src="https://web3forms.com/client/script.js" async defer></script>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Inquiry;
+export default Inquiry

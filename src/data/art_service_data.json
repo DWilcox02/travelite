@@ -1,61 +1,41 @@
 [
     {
-        "name": "Pet Painting",
+        "name": "Pet Paintings",
         "price": 69,
-        "description": "Pet Painting",
-        "image": "/services/molly.jpg",
+        "description": "Pet Paintings",
+        "image": "/art/chester.png",
         "examples": [
-            "/services/molly.jpg"
+            "/art/manon.png",
+            "/art/sully_unfinished.jpg"
         ],
         "id": 1
-    },
-    {
-        "name": "Digital Art Commissions",
-        "price": 420,
-        "description": "Digital Art Commissions",
-        "image": "/services/marijuana.jpg",
-        "examples": [
-            "/services/molly.jpg",
-            "/services/molly.jpg"
-        ],
-        "id": 2
     },
     {
         "name": "Non-Pet Portraits",
         "price": 69420,
         "description": "Non-Pet Portraits",
-        "image": "/services/boobs.png",
+        "image": "/art/flower_girl.JPG",
         "examples": [
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg"
+            "/art/grandad.jpeg"
         ],
         "id": 3
     },
     {
-        "name": "New Projects",
+        "name": "Current Projects",
         "price": 69420,
-        "description": "New Projects",
-        "image": "/services/el_tio.jpg",
+        "description": "Current Projects",
+        "image": "/art/beach.png",
         "examples": [
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg"
+            "/art/spooky_bath.jpeg"
         ],
         "id": 4
     },
     {
-        "name": "Other Painting Services",
+        "name": "Mural Services",
         "price": 69420,
-        "description": "Other Painting Services",
-        "image": "/services/pigeon.jpg",
+        "description": "Mural Services",
+        "image": "/art/cougar.jpeg",
         "examples": [
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg",
-            "/services/molly.jpg",
             "/services/molly.jpg"
         ],
         "id": 5

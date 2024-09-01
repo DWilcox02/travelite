@@ -1,5 +1,5 @@
 :root {
-  font-family: Cholvine;
+  font-family: Buydog;
   line-height: 1.5;
   font-weight: 400;
 
@@ -36,6 +36,21 @@ hr {
 @font-face {
   font-family: Franchise;
   src: url(/fonts/franchise_2/Franchise.ttf);
+}
+
+@font-face {
+  font-family: Kilo;
+  src: url(/fonts/kilo/Kilo.otf);
+}
+
+@font-face {
+  font-family: Buydog;
+  src: url(/fonts/Buydog/Buydog.ttf);
+}
+
+@font-face {
+  font-family: Evagrande;
+  src: url(/fonts/evagrande/Evagrande.otf);
 }
 
 /* Style the video container */

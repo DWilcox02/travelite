@@ -5,14 +5,14 @@ function App() {
     const [bgColour, setBgColour] = useState("bg-sky-500");
     const [bgVideo, setBgVideo] = useState("/backgrounds/vertical_white.mp4");
 
-    function setTravelSection() {
+    function setPetSittingSection() {
         setBgColour("bg-sky-500");
         setBgVideo("/backgrounds/vertical_white.mp4");
     }
 
     function setArtSection() {
-      setBgColour("bg-pink-500");
-      setBgVideo("/backgrounds/horizontal_pink.mp4");
+        setBgColour("bg-pink-500");
+        setBgVideo("/backgrounds/horizontal_pink.mp4");
     }
 
     return (
@@ -30,8 +30,8 @@ function App() {
             </video>
             <div className={`flex justify-center items-center h-screen ${bgColour} bg-opacity-40 w-full p-4 transition-all duration-500`}>
                 <PageContainer
-                    setTravelSection={setTravelSection}
                     setArtSection={setArtSection}
+                    setPetSitting={setPetSittingSection}
                 ></PageContainer>
             </div>
         </div>
